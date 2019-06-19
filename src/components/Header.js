@@ -1,17 +1,24 @@
 import React, { Component } from "react";
-import ActiveBox from '../img/ActiveBox.png'
+import ActiveBox from '../img/ActiveBox.png';
+import { connect } from 'react-redux';
+import {getBlocks} from '../store/actions';
 
 class Header extends Component {
+
+    componentDidMount() {
+         this.props.getBlocks();        
+    } 
+
     render() {
         return (
             <header className="header">
                 <div className="wrapper">
-                    <div className="container-fluid no-padding">
-                        <div className="row">
-                            <div className="col-3">
+                    <div className="container-fluid container-md no-padding header-underline ">
+                        <div className="row ">
+                            <div className="col-xl-3">
                                 <img src={ActiveBox} className="logo" />
                             </div>                            
-                            <div className="col-7 ml-auto">
+                            <div className="col-xl-7 ml-auto">
                                 <nav>
                                     <ul className="menu d-flex animated fadeInDown">
                                         <li className="menu__item">
@@ -44,10 +51,43 @@ class Header extends Component {
                             </div>
                         </div>               
                     </div>
+                    <div className="container-fluid header-text-wrapper">
+                        <div className="row">
+                            <div className="col-xl-10 header-title">                               
+                                YOUR FAVORITE ONE PAGE
+                            </div>     
+                        </div>
+                        <div className="row">
+                            <div className="col-xl-10 header-title">                                
+                                MULTI PURPOSE TEMPLATE
+                            </div>     
+                        </div>
+                        <div className="row">
+                            <div className="col-xl-10 header-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.
+                            </div>     
+                        </div>
+                    </div>
+                    <div className="container-fluid header-button-wrapper">
+                        <div className="row">
+                            <div className="header-button" onClick={() => this.props.getBlocks()}>
+                                FIND OUT MORE
+                            </div>                           
+                        </div>
+                    </div>
                 </div>
             </header>
         );
     }
 }
 
-export default Header;
+const mapDispatchToProps = dispatch => {
+    return {
+      getBlocks: () => dispatch(getBlocks())    
+    }
+  }
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Header)
