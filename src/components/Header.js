@@ -12,37 +12,37 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <div className="wrapper">
-                    <div className="container-fluid container-md no-padding header-underline ">
+                <div className="wrapper-header">
+                    <div className="container-fluid container-md no-padding header-underline">
                         <div className="row ">
-                            <div className="col-xl-3">
+                            <div className="col-xl-3 activeBox">
                                 <img src={ActiveBox} className="logo" />
                             </div>                            
                             <div className="col-xl-7 ml-auto">
                                 <nav>
-                                    <ul className="menu d-flex animated fadeInDown">
+                                    <ul className="menu">
                                         <li className="menu__item">
-                                            <a href="#">
+                                            <a href="">
                                                 FEATURES
                                             </a>
                                         </li>
                                         <li className="menu__item">
-                                            <a href="#">
+                                            <a href="">
                                                 WORKS
                                             </a>
                                         </li>
                                         <li className="menu__item">
-                                            <a href="#">
+                                            <a href="">
                                                 OUR TEAM
                                             </a>
                                         </li>
                                         <li className="menu__item">
-                                            <a href="#">
+                                            <a href="">
                                                 TESTIMONIALS
                                             </a>
                                         </li>
                                         <li className="menu__item">
-                                            <a href="#">
+                                            <a href="">
                                                 DOWNLOAD
                                             </a>
                                         </li>
@@ -54,19 +54,12 @@ class Header extends Component {
                     <div className="container-fluid header-text-wrapper">
                         <div className="row">
                             <div className="col-xl-10 header-title">                               
-                                YOUR FAVORITE ONE PAGE
-                            </div>     
-                        </div>
-                        <div className="row">
-                            <div className="col-xl-10 header-title">                                
-                                MULTI PURPOSE TEMPLATE
-                            </div>     
-                        </div>
-                        <div className="row">
+                                YOUR FAVORITE ONE PAGE MULTI PURPOSE TEMPLATE
+                            </div>   
                             <div className="col-xl-10 header-text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.
-                            </div>     
-                        </div>
+                            </div>       
+                        </div>                       
                     </div>
                     <div className="container-fluid header-button-wrapper">
                         <div className="row">

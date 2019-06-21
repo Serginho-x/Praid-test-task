@@ -15,12 +15,3 @@ export const getBlocks = () => {
         }        
     };  
 } 
-
-export const CHANGE_BLOCKS = 'CHANGE_BLOCKS'
-export const changeBlocks = () => {
-    return (dispatch) => { 
-        dispatch({
-            type: CHANGE_BLOCKS
-        });  
-    };  
-}  

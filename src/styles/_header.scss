@@ -3,8 +3,7 @@
     background: url('../img/Layer34.png')
 }
 
-.wrapper {
-    width: 1170px;
+.wrapper-header {    
     margin: 0 auto;    
 }
 
@@ -26,6 +25,7 @@ ul, li {
 .menu {
     margin-top: 38px;
     justify-content: flex-end;
+    display: flex;
 }
 
 .menu__item {
@@ -33,46 +33,45 @@ ul, li {
 }
 
 .menu__item a {
-    font-family: 'Raleway', sans-serif;
+    font-family: $main-font;
     font-size: 13px;
     font-weight: 700;
     color: #c9ccd5;
 }
 
 .header-text-wrapper {
-    margin-top: 129px;
+    margin-top: 141px;
 }
 
 .header-title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $secondary-font;
     font-size: 65px;
     font-weight: 700;
-    color: #ffffff;
+    color: $white;
     text-align: center;
-    margin: 0 auto;
-    height: 71px;
+    margin: 0 auto; 
+    line-height: 1.1;
 }
 
-.header-text {
-    margin-top: 37px;
-    font-family: 'Raleway', sans-serif;
+.header-text {    
+    font-family: $main-font;
     font-size: 22px;
-    color: #ffffff;
-    margin: 37px auto 0;
+    color: $white;
+    margin: 24px auto 0;
     padding: 0 28px;
     text-align: center;
 }
 
 .header-button-wrapper {
-margin-top: 73px;
+    margin-top: 73px;
 }
 
 .header-button {
-    background-color: #e84545;
+    background-color: $red;
     height: 46px;
     width: 200px;
-    color: #ffffff;
-    font-family: 'Raleway', sans-serif;
+    color: $white;
+    font-family: $main-font;
     font-size: 13px;
     font-weight: 600;
     text-align: center;
@@ -90,3 +89,53 @@ margin-top: 73px;
     padding-left: 0;
     padding-right: 0
 }
+
+@media (min-width: 1170px) {
+    .wrapper-header {
+        width: 1170px;
+    }
+ }
+
+ @media (max-width: 1200px) {
+    .menu {        
+        justify-content: center;       
+    }
+
+    .activeBox {
+         text-align: center;
+     }
+
+    .header {
+         height: 690px;
+    }
+
+    .header-text-wrapper {
+        margin-top: 60px;
+    }
+
+    .header-title {
+        font-size: 40px;
+    }
+
+    .header-text {  
+        font-size: 20px;
+    }
+ }
+
+ @media (max-width: 670px) {
+    .header-text-wrapper {
+        margin-top: 30px;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .header-text {  
+        font-size: 15px;
+    }
+
+    .menu {
+        display: block;
+    }
+ }
