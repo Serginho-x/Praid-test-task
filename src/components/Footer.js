@@ -10,7 +10,7 @@ class Footer extends Component {
         return (
            <footer className="footer">
                <div className="footer-wrapper">
-               <div className="container-fluid top-container">
+               <div className="container-fluid top-container container-wrapper">
                     <div className="row d-flex">
                         <div className="col-12 offset-md-1 col-md-3 column">
                             <div className="title">LOCATION</div>

@@ -12,7 +12,7 @@ class Header extends Component {
     render() {
         return (
             <header className="header">
-                <div className="wrapper-header">
+                <div className="wrapper-header container-wrapper">
                     <div className="container-fluid container-md no-padding header-underline">
                         <div className="row ">
                             <div className="col-xl-3 activeBox">

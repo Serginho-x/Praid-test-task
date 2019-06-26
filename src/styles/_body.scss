@@ -1,6 +1,40 @@
 .body {    
     font-family: $main-font;
+    overflow-x: hidden;
 }    
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container-wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.slider {
+    position: relative;
+    width: 951px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+  
+.slider-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+  
+.slide {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+} 
 
 .wrapper-block {
     width: 1170px;
@@ -233,6 +267,9 @@
 }
 
 @media (min-width: 1470px) { 
+    .slider {
+        height: 500px;
+    }
     .review-table{
         .review {
             height: 500px;
@@ -253,7 +290,10 @@
     }
   }
 
-@media (max-width: 1170px) {
+@media (max-width: 1200px) {
+    .review-table {        
+        width: 921px;        
+    }    
     .wrapper-block {
         width: 100%;
     }
@@ -262,14 +302,29 @@
         .team { 
             padding: 0px 0px 15px 0;
 
-            .info {
-                margin-left: 0;
-            }
+            
         }
     }
-}   
+}
+
+@media (max-width: 970px) {
+    .slider {
+        height: 400px;
+        width: 570px;
+    }
+    .review-table {        
+        width: 540px;        
+    }
+}
 
 @media (max-width: 570px) {
+    .slider {
+        height: 300px;
+        width: 350px;
+    }
+    .review-table {        
+        width: 320px;        
+    }
     .team-container {
         width: 1050px;
     }
@@ -282,6 +337,16 @@
         .review {           
             .title {               
                 font-size: 35px;
+            }
+        }
+    }
+}
+
+@media  (max-width: 800px) {
+    .team-container {        
+        .team {
+            .info {
+                margin-left: 0;
             }
         }
     }
